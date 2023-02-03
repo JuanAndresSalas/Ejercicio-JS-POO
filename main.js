@@ -2,16 +2,13 @@
 var consultorio = new Consultorio("JS Salud")
 
 //Ingresar datos al consultorio
-pacientes.forEach(element => {
-    let paciente = new Paciente(element.nombre,element.edad,element.rut,element.diagnostico)
-    consultorio.setPacientes(paciente)
-    });
+consultorio.ingresarPacientes(pacientes)
 
 //Mostrar todos los pacientes
 consultorio.mostrarPacientes()
 
 //Encontrar paciente por nombre
-let rutBuscar = "18227489-5"
+let rutBuscar = "25987636-3"
 
 if(consultorio.encontrarPaciente(rutBuscar)){
     let paciente = consultorio.encontrarPaciente(rutBuscar);
@@ -24,10 +21,14 @@ if(consultorio.encontrarPaciente(rutBuscar)){
 
 //Modificar valores
 
-consultorio.modificarValor("18227489-5","nombre","bla bla bla")
-
+consultorio.modificarValor("25987636-3","nombre","1234")
+console.log("==========================================================\nLista pacientes actualizada")
 consultorio.mostrarPacientes()
 
-pacientes = consultorio.pacientes
-console.log(pacientes)
+//Modificación y guardado con localStorage() del arreglo original
+pacientes = consultorio.pacientes; //a la variable pacientes se le asigna el arreglo consultorio.pacientes que está actualizado con las modificaciones
+localStorage.setItem('BDPacientes', JSON.stringify(pacientes)) //Guardado en memoria del arreglo como JSON
+
+
+
 

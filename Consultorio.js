@@ -11,20 +11,28 @@ function Consultorio(nombre){
     //Setters
     this.setPacientes = (paciente) =>{this.pacientes.push(paciente)}
 
+    this.ingresarPacientes = (arreglo) =>{
+        arreglo.forEach(element => {
+            let paciente = new Paciente(element.nombre,element.edad,element.rut,element.diagnostico)
+            consultorio.setPacientes(paciente)
+        });
+    }
 
     
 
     //Funciones Custom
+
     //Mostrar los pacientes
     this.mostrarPacientes = () =>{
         console.log(consultorio.getNombre())
-        console.log("=============================\nPacientes:")
+        console.log("==========================================================\nPacientes:")
 
         consultorio.pacientes.forEach(element =>{
             console.log(`Nombre: ${element.nombre}\nEdad: ${element.edad} \nRut: ${element.rut}\nDiagnostico: ${element.diagnostico}`)
         } )
-        console.log("=============================")    
+        console.log("==========================================================")    
     }
+
     //Esta funcion retorna el objeto completo si encuentra el nombre del paciente
     this.encontrarPaciente = (rut) =>{
         if(this.pacientes.find(element => element.rut == rut)){
@@ -63,6 +71,7 @@ function Consultorio(nombre){
         } 
         
         }
+        
     }
 
     

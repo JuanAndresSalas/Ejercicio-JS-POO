@@ -19,3 +19,5 @@ var pacientes = [{
     "rut": "8975892-0",
     "diagnostico": "Hipertensión"
 }]
+
+pacientes = JSON.parse(localStorage.getItem("BDPacientes")) //Recuperación del item guardado en memoria "BDPacientes" y posterior conversion de JSON a arreglo con la funcion JSON.parse()
