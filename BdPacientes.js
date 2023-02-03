@@ -1,4 +1,4 @@
-const pacientes = [{
+var pacientes = [{
     "nombre": "Perico Los Palotes",
     "edad": 31,
     "rut": "17449376-5",
@@ -6,7 +6,7 @@ const pacientes = [{
 }, {
     "nombre": "Juan Salas",
     "edad": 30,
-    "rut": "18227489-4",
+    "rut": "18227489-5",
     "diagnostico": "Hipocondria"
 }, {
     "nombre": "Armando Mocha",
