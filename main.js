@@ -13,5 +13,12 @@ consultorio.pacientes.forEach(element =>{
 console.log("=============================")
 
 //Encontrar paciente por nombre
-console.log(consultorio.encontrarPaciente("Juan Salas"))
+let nombreBuscar = "Armando Mocha"
+if(consultorio.encontrarPaciente(nombreBuscar)){
+    let paciente = consultorio.encontrarPaciente(nombreBuscar);
+    console.log(`Paciente encontrado:\nNombre:${paciente.nombre}\nEdad:${paciente.edad}\nRut:${paciente.rut}\nDiagnostico:${paciente.diagnostico}`)
+}else{
+    console.log("Paciente no encontrado")
+}
+
 

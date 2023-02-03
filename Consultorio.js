@@ -12,8 +12,15 @@ function Consultorio(nombre){
     }
 
     //Custom
+
+    //Esta funcion retorna el objeto completo si encuentra el nombre del paciente
     this.encontrarPaciente = (nombrePaciente) =>{
-        return this.pacientes.find(element => element.nombre == nombrePaciente)           
+        if(this.pacientes.find(element => element.nombre == nombrePaciente)){
+            return this.pacientes.find(element => element.nombre == nombrePaciente)
+        }else{
+            return false
+        }
+
     }
     
     
