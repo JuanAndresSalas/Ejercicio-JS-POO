@@ -10,18 +10,18 @@ consultorio.mostrarPacientes()
 //Encontrar paciente por nombre
 let rutBuscar = "25987636-3"
 
-if(consultorio.encontrarPaciente(rutBuscar)){
+if (consultorio.encontrarPaciente(rutBuscar)) {
     let paciente = consultorio.encontrarPaciente(rutBuscar);
     console.log("Busqueda Paciente")
     console.log(`Paciente encontrado:\nNombre:${paciente.nombre}\nEdad:${paciente.edad}\nRut:${paciente.rut}\nDiagnostico:${paciente.diagnostico}`)
-}else{
+} else {
     console.log("Busqueda Paciente")
     console.log("Paciente no encontrado")
 }
 
 //Modificar valores
 
-consultorio.modificarValor("25987636-3","nombre","1234")
+consultorio.modificarValor("25987636-3", "nombre", "1234")
 console.log("==========================================================\nLista pacientes actualizada")
 consultorio.mostrarPacientes()
 
